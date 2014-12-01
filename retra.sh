@@ -5,7 +5,7 @@
 #      retra.sh
 #
 # Description:
-#      This script reduces the volume of your MacBook's trash box. 
+#      This script reduces the volume of your Mac's trash box. 
 #      Removing the old files before more than half year
 #      and the empty directories from your trash box.
 #

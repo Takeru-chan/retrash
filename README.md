@@ -1,5 +1,5 @@
-#This script reduces the volume of your MacBook's trash box. 
-MacBoouのゴミ箱から古いファイルと空のディレクトリを削除するシェルスクリプトです。  
+#This script reduces the volume of your Mac's trash box. 
+Macのゴミ箱から古いファイルと空のディレクトリを削除するシェルスクリプトです。  
 「ゴミ箱の中身、どのくらいあるのかな？」と覗いてみたら。。。
 
 ```
@@ -23,7 +23,6 @@ MacBoouのゴミ箱から古いファイルと空のディレクトリを削除�
 /Users/takeru/.Trash/free-outline-icons.zip
 /Users/takeru/.Trash/phone.png
 /Users/takeru/.Trash/shutdown.png
-/Users/takeru/.Trash/DRBFM_141113(機構).numbers/Data
 /Users/takeru/.Trash/git-test/.git/branches
 /Users/takeru/.Trash/git-test/.git/media/objects
 /Users/takeru/.Trash/git-test/.git/media/tmp
