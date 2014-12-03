@@ -1,5 +1,5 @@
 #! /bin/sh
-# @(#) retra.sh ver.1.2  2014.12.2  (c)Takeru.
+# @(#) retra.sh ver.1.2.1  2014.12.3  (c)Takeru.
 #
 # Usage:
 #      retra.sh
@@ -19,7 +19,9 @@ tmpfile="/tmp/retrash"
 logfile=$HOME"/log/retrash.log"
 echo -------------`date +%F`------------- >> $logfile
 find $HOME/.Trash -mtime +182 > $tmpfile
-cat $tmpfile | xargs ls -l | awk '{volume += $5}END{print(volume,"bytes reduced.")}' >> $logfile
+cat $tmpfile | sed 's/^/"/;s/$/"/' | xargs ls -l | awk '{volume += $5}END{printf("%dbytes reduced.\n",volume)}' | sed ':loop
+s/\(.*[0-9]\)\([0-9]\{3\}\)/\1,\2/
+t loop' >> $logfile
 cat $tmpfile | tee -a $logfile | sed 's/^/"/;s/$/"/' | xargs -J % mv % /tmp/
 find $HOME/.Trash -type d -empty > $tmpfile
 cat $tmpfile | tee -a $logfile | sed 's/^/"/;s/$/"/' | xargs rmdir
