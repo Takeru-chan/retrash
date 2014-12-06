@@ -1,5 +1,5 @@
 #! /bin/sh
-# @(#) retra.sh ver.1.2.1  2014.12.3  (c)Takeru.
+# @(#) retra.sh ver.1.2.2  2014.12.6  (c)Takeru.
 #
 # Usage:
 #      retra.sh
@@ -17,6 +17,10 @@
 set -o nounset                              # Treat unset variables as an error
 tmpfile="/tmp/retrash"
 logfile=$HOME"/log/retrash.log"
+if [ "`tail -1 $logfile`" == "0bytes reduced." ]; then 
+	head -$((`cat $logfile | wc -l` - 2)) $logfile > $tmpfile
+	cp $tmpfile $logfile
+fi
 echo -------------`date +%F`------------- >> $logfile
 find $HOME/.Trash -mtime +182 > $tmpfile
 cat $tmpfile | sed 's/^/"/;s/$/"/' | xargs ls -l | awk '{volume += $5}END{printf("%dbytes reduced.\n",volume)}' | sed ':loop
