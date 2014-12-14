@@ -37,7 +37,8 @@ Macのゴミ箱から古いファイルと空のディレクトリを削除す�
 
 一応削除したファイルのログを残すようにしました。
 ##Usage | 使い方
-ターミナルでretra.shと入力します。
+ターミナルでretra.shと入力します。  
+-logオプションを与えるとログファイルの中身を表示します。
 ##License
 This script has released under the MIT license.  
 [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT)
