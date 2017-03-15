@@ -1,4 +1,4 @@
-#This script reduces the volume of your Mac's trash box. 
+# This script reduces the volume of your Mac's trash box. 
 Macのゴミ箱から古いファイルと空のディレクトリを削除するシェルスクリプトです。  
 「ゴミ箱の中身、どのくらいあるのかな？」と覗いてみたら。。。
 
@@ -36,9 +36,9 @@ Macのゴミ箱から古いファイルと空のディレクトリを削除す�
 ```
 
 一応削除したファイルのログを残すようにしました。
-##Usage | 使い方
+## Usage | 使い方
 ターミナルでretra.shと入力します。  
 -logオプションを与えるとログファイルの中身を表示します。
-##License
+## License
 This script has released under the MIT license.  
 [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT)
